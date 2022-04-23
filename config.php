@@ -7,10 +7,11 @@ define('__SYNC_PORT__', '3100');
 
 define('__MAX_UPLOAD_FILE_SIZE__', '5');
 
-define('__HOSTNAME__', 'http://' . $_SERVER['SERVER_ADDR'] . '/serge/client');
-define('__HOSTAPI__', 'http://' . $_SERVER['SERVER_ADDR'] . '/serge/api');
-define('__HOST__', 'http://' . $_SERVER['SERVER_ADDR'] . '/serge/');
+define('__HOSTNAME__', 'http://' . $_SERVER['SERVER_ADDR'] . '/welleh/client');
+define('__HOSTAPI__', 'http://' . $_SERVER['SERVER_ADDR'] . '/welleh/api');
+define('__HOST__', 'http://' . $_SERVER['SERVER_ADDR'] . '/welleh/');
 
+define('__APP_NAME__', 'Kuisioner SPBE');
 define('__PC_CUSTOMER__', 'Siloam Hospital');
 define('__PC_CUSTOMER_GROUP__', 'Pemerintahan Provinsi Riau');
 define('__PC_CUSTOMER_ADDRESS__', 'Jalan Dr. Soetomo No. 65');
