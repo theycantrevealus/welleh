@@ -135,7 +135,7 @@ class Kuisioner extends Utility
     )
       ->where(
         array(
-          'master_kuisioner_domain.nama' => 'ILIKE ' . '\'%' . $_GET['search'] . '%\'',
+          'master_kuisioner_domain.nama' => 'LIKE ' . '\'%' . $_GET['search'] . '%\'',
           'AND',
           'master_kuisioner_domain.deleted_at' => 'IS NULL'
         ),
@@ -158,7 +158,7 @@ class Kuisioner extends Utility
     )
       ->where(
         array(
-          'master_kuisioner_aspek.nama' => 'ILIKE ' . '\'%' . $_GET['search'] . '%\'',
+          'master_kuisioner_aspek.nama' => 'LIKE ' . '\'%' . $_GET['search'] . '%\'',
           'AND',
           'master_kuisioner_aspek.deleted_at' => 'IS NULL'
         ),
@@ -181,7 +181,7 @@ class Kuisioner extends Utility
     )
       ->where(
         array(
-          'master_kuisioner_indikator.nama' => 'ILIKE ' . '\'%' . $_GET['search'] . '%\'',
+          'master_kuisioner_indikator.nama' => 'LIKE ' . '\'%' . $_GET['search'] . '%\'',
           'AND',
           'master_kuisioner_indikator.deleted_at' => 'IS NULL'
         ),
@@ -1022,7 +1022,7 @@ class Kuisioner extends Utility
       $paramData = array(
         'master_kuisioner_indikator.deleted_at' => 'IS NULL',
         'AND',
-        'master_kuisioner_indikator.nama' => 'ILIKE ' . '\'%' . $parameter['search']['value'] . '%\''
+        'master_kuisioner_indikator.nama' => 'LIKE ' . '\'%' . $parameter['search']['value'] . '%\''
       );
 
       $paramValue = array();
@@ -1092,7 +1092,7 @@ class Kuisioner extends Utility
       $paramData = array(
         'master_kuisioner_domain.deleted_at' => 'IS NULL',
         'AND',
-        'master_kuisioner_domain.nama' => 'ILIKE ' . '\'%' . $parameter['search']['value'] . '%\''
+        'master_kuisioner_domain.nama' => 'LIKE ' . '\'%' . $parameter['search']['value'] . '%\''
       );
 
       $paramValue = array();
@@ -1162,7 +1162,7 @@ class Kuisioner extends Utility
       $paramData = array(
         'master_kuisioner_aspek.deleted_at' => 'IS NULL',
         'AND',
-        'master_kuisioner_aspek.nama' => 'ILIKE ' . '\'%' . $parameter['search']['value'] . '%\''
+        'master_kuisioner_aspek.nama' => 'LIKE ' . '\'%' . $parameter['search']['value'] . '%\''
       );
 
       $paramValue = array();
@@ -1234,9 +1234,9 @@ class Kuisioner extends Utility
         'AND',
         'pegawai.deleted_at' => 'IS NULL',
         'AND',
-        '(kuisioner_pertanyaan.indikator' => 'ILIKE ' . '\'%' . $parameter['search']['value'] . '%\'',
+        '(kuisioner_pertanyaan.indikator' => 'LIKE ' . '\'%' . $parameter['search']['value'] . '%\'',
         'OR',
-        'kuisioner_pertanyaan.pertanyaan' => 'ILIKE ' . '\'%' . $parameter['search']['value'] . '%\')'
+        'kuisioner_pertanyaan.pertanyaan' => 'LIKE ' . '\'%' . $parameter['search']['value'] . '%\')'
       );
 
       $paramValue = array();
